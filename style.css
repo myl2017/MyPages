@@ -87,6 +87,7 @@ section.slide > .slide-content > ul{
 }
 section.slide > .slide-content > ul > li{
     width: 100%;
+    height: auto;
     flex-shrink: 0; /*不要收缩*/
 }
 section.slide img{
