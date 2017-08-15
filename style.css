@@ -45,6 +45,7 @@ section.profile .category span{
         max-width: 320px;
     }
 }
+
 /******************slide css********************/
 section.slide{
     position: relative;
@@ -84,7 +85,7 @@ section.slide > .slide-content .next{
 }
 section.slide > .slide-content > ul{
     display: flex;
-    transition: transform linear .8s;
+    transition: transform linear .8s; /*slide 过渡*/
 }
 section.slide > .slide-content > ul > li{
     width: 100%;
@@ -143,6 +144,7 @@ section.slide > .slide-control ul > li.active{
         margin-left: 5px;
     }
 }
+
 /****************album css*********************/
 section.album ul li > p{ overflow: hidden;}
 section.album{
@@ -209,7 +211,6 @@ section.album ul  li > img{
 section.album ul  li > h3,p{
     line-height: 1.6em;
 }
-
 
 /****************loadMore css****************/
 .loadMore{
