@@ -3,7 +3,7 @@
 ul,ol{ list-style: none;}
 img{ border: none; vertical-align: top;}
 a,a:hover,a:visited{ text-decoration: none;}
-/*{ outline: 1px solid red;}精髓技巧 */
+/*{ outline: 1px solid red;} *精髓技巧*/
 
 /****************public css********************/
 body{
@@ -91,7 +91,6 @@ section.slide > .slide-content > ul > li{
 }
 section.slide img{
     width: 100%;
-    height: auto;
 }
 section.slide > .slide-control{
     position: absolute;
