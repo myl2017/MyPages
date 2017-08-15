@@ -84,6 +84,7 @@ section.slide > .slide-content .next{
 }
 section.slide > .slide-content > ul{
     display: flex;
+    transition: transform linear .8s;
 }
 section.slide > .slide-content > ul > li{
     width: 100%;
