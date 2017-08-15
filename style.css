@@ -1,9 +1,9 @@
 /*************css reset****************/
 *{ margin: 0; padding: 0; box-sizing: border-box; }
 ul,ol{ list-style: none;}
-img{ border: none;}
+img{ border: none; vertical-align: top;}
 a,a:hover,a:visited{ text-decoration: none;}
-/*{ outline: 1px solid red;}*精髓技巧 */
+/*{ outline: 1px solid red;}精髓技巧 */
 
 /****************public css********************/
 body{
@@ -22,7 +22,7 @@ section.profile{
     background: #fcfcfc;
 }
 section.profile > .avatar{
-    padding-top: 68px;
+    padding-top: 58px;
     padding-bottom: 53px;
 }
 section.profile > .avatar > img{
@@ -34,11 +34,16 @@ section.profile .category{
     margin-bottom: 45px;
 }
 section.profile .category span{
-    padding: .3em 2em .3em 2em;
+    padding: .3em 1.5em .3em 1.5em;
     display: inline-block;
     background: rgba(232,231,231,0.5);
-    margin: 0 20px;
+    margin: 0.5em 1em;
     cursor: pointer;
+}
+@media (max-width: 425px) {
+    section.profile .category span{
+        max-width: 320px;
+    }
 }
 /******************slide css********************/
 section.slide{
@@ -58,6 +63,14 @@ section.slide > .slide-content .previous , .next{
     font-size: 32px;
     color: #fff;
     cursor: pointer;
+}
+@media (max-width: 425px) {
+    section.slide > .slide-content .previous , .next{
+        width: 1em;
+        height: 1em;
+        line-height: 1em;
+        font-size: 2em;
+    }
 }
 section.slide > .slide-content .previous{
     position: absolute;
@@ -83,7 +96,12 @@ section.slide > .slide-control{
     position: absolute;
     bottom: 5%;
     left: 50%;
-    transform: translateX(-150px);
+    transform: translateX(-200px);
+}
+@media (max-width: 425px) {
+    section.slide > .slide-control{
+        transform: translateX(-100px);
+    }
 }
 section.slide > .slide-control ul{
     display: flex;
@@ -98,18 +116,34 @@ section.slide > .slide-control ul > li{
     margin-left: 20px;
     cursor: pointer;
 }
+@media (max-width: 425px) {
+    section.slide > .slide-control ul > li{
+        width: 1em;
+        height: 1em;
+        line-height: 1em;
+        margin-left: 5px;
+    }
+}
 section.slide > .slide-control ul > li.active{
     width: 1.3em;
     height: 1.3em;
     border-radius: 50%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.7);
     line-height: 1.3em;
     text-align: center;
     margin-left: 20px;
     color: #fff;
 }
-
+@media (max-width: 425px) {
+    section.slide > .slide-control ul > li.active{
+        width: 1em;
+        height: 1em;
+        line-height: 1em;
+        margin-left: 5px;
+    }
+}
 /****************album css*********************/
+section.album ul li > p{ overflow: hidden;}
 section.album{
     background: #fff;
 }
@@ -123,20 +157,61 @@ section.album ul {
 section.album ul li{
     width: calc(33.333333% - 20px);
     padding-bottom: 40px;
-
 }
 section.album ul  li > img{
-    max-width: 280px;
-    min-height: 220px;
-    border-radius: 6px;
+    max-width: 288px;
+    min-height: 200px;
+    border-radius: 8px;
     margin-bottom: 25px;
+}
+@media(max-width: 768px) {
+    section.album ul li{
+        width: calc(50% - 15px);
+    }
+    section.album ul  li > img{
+        max-width: 100%;
+    }
+    section.album ul li:last-child{
+        display: none;
+    }
+}
+@media(max-width: 425px) {
+    section.album ul li{
+        width: calc(100% - 95px);
+    }
+    section.album ul  li > img{
+        max-width: 100%;
+    }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+    section.album ul li{
+        width: calc(100% - 45px);
+    }
+    section.album ul li:last-child{
+        display: block;
+    }
+    section.album ul  li > img{
+        max-width: 100%;
+    }
+}
+@media(max-width: 375px) {
+    section.album ul li{
+        width: calc(100% - 45px);
+    }
+    section.album ul li:last-child{
+        display: block;
+    }
+    section.album ul  li > img{
+        max-width: 100%;
+    }
 }
 section.album ul  li > h3,p{
     line-height: 1.6em;
 }
 
+
 /****************loadMore css****************/
-div.loadMore{
+.loadMore{
     text-align: center;
     margin-bottom: 50px;
 }
@@ -146,10 +221,9 @@ div.loadMore{
     border-radius: 20px;
     color: #fff;
     font-size: 20px;
-    padding: 8px 20px 8px 20px;
+    padding: 8px 15px 8px 15px;
     display: inline-block;
 }
-
 .loadMore_button:hover {
     background: #3cb0fd;
     background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
