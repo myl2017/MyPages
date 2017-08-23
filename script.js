@@ -65,7 +65,7 @@ loadMoreButton.onclick = function () {
         for(var i = 0; i<data.content.length; i++){
             var liString =
                 `<li>
-                    <img src="./images/giphy.gif" data-source="${data.content[i].url}"/>
+                    <img src="./images/giphy.gif" data-source="${data.content[i].url}" alt="${data.content[i].alt}"/>
                     <h3>${data.content[i].title}</h3>
                     <p>${data.content[i].text}</p>
                  </li>
